@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia do Visitante - Quilombo do Camorim</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- QR Code Generator Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- Google Fonts (Plus Jakarta Sans & Merriweather) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#2D5A27',
+                            darkgreen: '#1E3D1A',
+                            lightgreen: '#E8F0E6',
+                            earth: '#A65D37',
+                            deepearth: '#7A3E20',
+                            clay: '#D98A5B',
+                            sand: '#F7F4EF',
+                            warmgrey: '#3A3935'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F7F4EF;
+            color: #3A3935;
+        }
+        .hero-pattern {
+            background-color: #1E3D1A;
+            background-image: radial-gradient(#2D5A27 1.5px, transparent 1.5px), radial-gradient(#A65D37 1.5px, #1E3D1A 1.5px);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            opacity: 0.98;
+        }
+        .leaf-shape {
+            border-radius: 0 30px 0 30px;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -5px rgba(45, 90, 39, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-earth selection:text-white pb-12">
+
+    <!-- NAV BAR SUPORTE -->
+    <nav class="sticky top-0 z-40 bg-brand-darkgreen/95 backdrop-blur-md text-white border-b border-brand-earth/30">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-brand-earth flex items-center justify-center text-white font-bold text-xl shadow-inner">
+                    QC
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight">Quilombo do Camorim</h1>
+                    <p class="text-xs text-brand-lightgreen/80">Turismo Cultural e Ancestralidade</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER / BANNER HERO -->
+    <header class="relative hero-pattern text-white py-16 px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-darkgreen/50 to-brand-darkgreen"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block bg-brand-earth/80 text-white text-xs uppercase tracking-widest font-bold px-3 py-1 rounded-full mb-4 border border-brand-clay/30">
+                Zona Oeste do Rio de Janeiro
+            </span>
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 text-brand-sand leading-tight">
+                Como Visitar o Quilombo do Camorim
+            </h1>
+            <p class="text-lg sm:text-xl text-brand-lightgreen max-w-2xl mx-auto font-light leading-relaxed">
+                Um guia cultural, ecológico e histórico no coração da Serra da Pedra Branca. Viva uma experiência inesquecível de ancestralidade e preservação ambiental.
+            </p>
+            
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#guia" class="bg-brand-earth hover:bg-brand-deepearth text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-lg flex items-center gap-2">
+                    <i class="fa-solid fa-compass">
+</i> Guia Prático
+                </a>
+                <a href="#mapa" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm font-semibold px-6 py-3 rounded-xl border border-white/20 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot">
+</i> Ver Localização
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 mt-8 space-y-12">
+
+        <!-- RESUMO DA EXPERIÊNCIA -->
+        <section class="bg-white p-6 sm:p-8 rounded-2xl custom-shadow border border-brand-earth/10">
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div class="p-4 rounded-xl bg-brand-lightgreen/50 border border-brand-green/10">
+                    <div class="w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+                        <i class="fa-solid fa-tree">
+</i>
+                    </div>
+                    <h3 class="font-bold text-brand-darkgreen text-lg">Mata Atlântica</h3>
+                    <p class="text-sm text-gray-600 mt-1">Trilhas ecológicas integradas ao Parque Estadual da Pedra Branca.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-amber-50 border border-amber-200/50">
+                    <div class="w-12 h-12 bg-brand-earth text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+                        <i class="fa-solid fa-drum">
+</i>
+                    </div>
+                    <h3 class="font-bold text-brand-deepearth text-lg">Cultura Vivo-Ancestral</h3>
+                    <p class="text-sm text-gray-600 mt-1">Rodas de conversa, capoeira, oficina de jongo e saberes quilombolas.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-lightgreen/50 border border-brand-green/10">
+                    <div class="w-12 h-12 bg-brand-green text-white rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+                        <i class="fa-solid fa-utensils">
+</i>
+                    </div>
+                    <h3 class="font-bold text-brand-darkgreen text-lg">Gastronomia Tradicional</h3>
+                    <p class="text-sm text-gray-600 mt-1">Alimentação afetiva preparada pela própria comunidade com produtos da horta.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GUIA DO VISITANTE PASSO A PASSO -->
+        <section id="guia" class="scroll-mt-20">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-darkgreen">Guia do Visitante</h2>
+                <p class="text-gray-600 mt-2">Passo a passo simples para organizar a sua vivência no Quilombo</p>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-6">
+                <!-- Passo 1 -->
+                <div class="bg-white rounded-2xl p-6 border-l-4 border-brand-earth shadow-md hover:shadow-lg transition-all relative overflow-hidden">
+                    <span class="absolute top-2 right-4 text-6xl font-serif font-extrabold text-brand-earth/10">01</span>
+                    <div class="w-10 h-10 bg-brand-earth/10 text-brand-earth rounded-lg flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fa-regular fa-calendar-check">
+</i>
+                    </div>
+                    <h3 class="font-bold text-xl text-brand-warmgrey mb-2">Agendamento Prévio</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        As visitas guiam grupos e escolares com foco em sustentabilidade. Reserve o seu dia e horário antecipadamente.
+                    </p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="bg-white rounded-2xl p-6 border-l-4 border-brand-green shadow-md hover:shadow-lg transition-all relative overflow-hidden">
+                    <span class="absolute top-2 right-4 text-6xl font-serif font-extrabold text-brand-green/10">02</span>
+                    <div class="w-10 h-10 bg-brand-green/10 text-brand-green rounded-lg flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fa-solid fa-route">
+</i>
+                    </div>
+                    <h3 class="font-bold text-xl text-brand-warmgrey mb-2">Como Chegar</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Localizado em Jacarepaguá/Camorim (Zona Oeste do Rio). Acesso pela Estrada do Camorim e entrada do Parque Estadual.
+                    </p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="bg-white rounded-2xl p-6 border-l-4 border-brand-clay shadow-md hover:shadow-lg transition-all relative overflow-hidden">
+                    <span class="absolute top-2 right-4 text-6xl font-serif font-extrabold text-brand-clay/10">03</span>
+                    <div class="w-10 h-10 bg-brand-clay/10 text-brand-clay rounded-lg flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fa-solid fa-heart">
+</i>
+                    </div>
+                    <h3 class="font-bold text-xl text-brand-warmgrey mb-2">Experiência Ancestral</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Use calçados fechados, protetor solar e repelente. Traga sua garrafa reutilizável e vivencie a cultura ancestral.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAPA DE LOCALIZAÇÃO -->
+        <section id="mapa" class="scroll-mt-20">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 custom-shadow border border-gray-100">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+                    <div>
+                        <span class="text-brand-earth font-bold text-xs uppercase tracking-wider">Como Encontrar</span>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-darkgreen">Mapa de Localização</h2>
+                        <p class="text-gray-600 text-sm mt-1">Estrada do Camorim / Serra da Pedra Branca - Zona Oeste, Rio de Janeiro - RJ</p>
+                    </div>
+                    <a href="https://maps.google.com/?q=Quilombo+do+Camorim+Rio+de+Janeiro" target="_blank" class="inline-flex items-center justify-center gap-2 bg-brand-green hover:bg-brand-darkgreen text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-all shadow-md self-start md:self-auto">
+                        <i class="fa-solid fa-diamond-turn-right">
+</i> Abrir no Google Maps
+                    </a>
+                </div>
+
+                <div class="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden bg-emerald-900 border border-gray-200 shadow-inner group">
+                    <iframe 
+                        title="Mapa Quilombo do Camorim"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.742468087965!2d-43.4357!3d-22.9596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda2032ca3321%3A0x6a3bcfa0df6bd1c6!2sQuilombo%20do%20Camorim!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        class="w-full h-full border-0 grayscale focus:grayscale-0 transition-all duration-500" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-gray-200 text-xs text-gray-700 flex justify-between items-center shadow-lg">
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-brand-earth text-sm">
+</i>
+                            <strong class="text-gray-900">Referência:</strong> Entrada do Parque Estadual da Pedra Branca (Zona Oeste).
+                        </span>
+                        <span class="hidden sm:inline-block bg-brand-lightgreen text-brand-darkgreen px-2 py-1 rounded font-medium">Jacarepaguá</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 CURIOSIDADES RÁPIDAS -->
+        <section class="bg-brand-darkgreen text-white rounded-3xl p-6 sm:p-10 relative overflow-hidden shadow-xl">
+            <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-green/30 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="mb-8 text-center sm:text-left">
+                <span class="text-brand-clay font-bold text-xs uppercase tracking-wider">Conhecimento & Herança</span>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold mt-1">3 Curiosidades Rápidas</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 relative z-10">
+                <!-- Curiosidade 1 -->
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:border-brand-clay/50 transition-all">
+                    <div class="text-brand-clay text-3xl font-bold mb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-landmark text-2xl">
+</i>
+                        <span class="text-base uppercase tracking-wider font-sans font-semibold">01</span>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-brand-sand">História & Resistência</h4>
+                    <p class="text-sm text-brand-lightgreen/90 leading-relaxed">
+                        Com raízes no século XVI, o Quilombo do Camorim preserva a memória do povo negro que habitava o sopé da Pedra Branca, figurando como um importante marco de resistência cultural e territorial no Rio de Janeiro.
+                    </p>
+                </div>
+
+                <!-- Curiosidade 2 -->
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:border-brand-clay/50 transition-all">
+                    <div class="text-brand-clay text-3xl font-bold mb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-seedling text-2xl">
+</i>
+                        <span class="text-base uppercase tracking-wider font-sans font-semibold">02</span>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-brand-sand">Flora & Agroecologia</h4>
+                    <p class="text-sm text-brand-lightgreen/90 leading-relaxed">
+                        A comunidade atua ativamente na preservação da Mata Atlântica através de hortas comunitárias, cultivo de plantas medicinais tradicionais e manejo sustentável das espécies nativas da região.
+                    </p>
+                </div>
+
+                <!-- Curiosidade 3 -->
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:border-brand-clay/50 transition-all">
+                    <div class="text-brand-clay text-3xl font-bold mb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-drum text-2xl"></i>
+                        <span class="text-base uppercase tracking-wider font-sans font-semibold">03</span>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-brand-sand">Cultura & Gastronomia</h4>
+                    <p class="text-sm text-brand-lightgreen/90 leading-relaxed">
+                        O local celebra vivências culturais ricas, incluindo rodas de jongo, oficinas de capoeira, artesanato local e a tradição de refeições coletivas feitas com temperos e colheitas locais.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-16 bg-brand-darkgreen text-brand-lightgreen/70 py-8 border-t border-brand-green">
+        <div class="max-w-5xl mx-auto px-4 text-center text-xs space-y-2">
+            <p class="font-bold text-brand-sand text-sm">Quilombo do Camorim — Patrimônio Cultural e Natural do Rio de Janeiro</p>
+            <p>Guia do Visitante & Panfleto Turístico Digital</p>
+            <p class="pt-4 text-brand-lightgreen/40">© 2026 Panfleto Interativo Guia do Visitante.</p>
+        </div>
+    </footer>
+</body>
+</html>
